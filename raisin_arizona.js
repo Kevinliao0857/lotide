@@ -15,16 +15,36 @@
 // console.log(raisinAlarm(["🍫", "🍇", "🍫", "🍫", "🍇"]));
 // console.log(raisinAlarm(["🍫", "🍫", "🍫"]))
 
+
+
 // version 2
+// const raisinAlarm = function(cookie) {
+//   if (cookie.includes("🍇")) {
+//     return "Raisin alert!";
+//   }  
+//   return "All good!";
+// };
+// console.log(raisinAlarm(["🍫", "🍫", "🍇", "🍫"]));
+// console.log(raisinAlarm(["🍫", "🍇", "🍫", "🍫", "🍇"]));
+// console.log(raisinAlarm(["🍫", "🍫", "🍫"]))
 
 
-const raisinAlarm = function(cookie) {
-  if (cookie.includes("🍇")) {
-    return "Raisin alert!";
-  }  
-  return "All good!";
+// version 3
+const raisinAlarmArray = function(cookie) {
+  let array = [];
+  for (let arr of cookie)
+  if (arr.includes("🍇")) {
+    array.push("Raisin alert!");
+  } else {
+  array.push("All good!");
+}
+return array
 };
 
-console.log(raisinAlarm(["🍫", "🍫", "🍇", "🍫"]));
-console.log(raisinAlarm(["🍫", "🍇", "🍫", "🍫", "🍇"]));
-console.log(raisinAlarm(["🍫", "🍫", "🍫"]))
+console.log(raisinAlarmArray(
+  [
+    ["🍫", "🍫", "🍇", "🍫"],
+    ["🍫", "🍇", "🍫", "🍫", "🍇"],
+    ["🍫", "🍫", "🍫"]
+  ]
+));
